@@ -1,0 +1,24 @@
+hint: core.useBuiltinFSMonitor=true is deprecated;please set core.fsmonitor=true instead
+hint: Disable this message with "git config advice.useCoreFSMonitorConfig false"
+[1mdiff --git a/index.html b/index.html[m
+[1mindex b762e2e..21bfa24 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -29,7 +29,7 @@[m
+                 <div class="project-item">[m
+                     <div class="project-info">[m
+                         <h1>Projeto 1</h1>[m
+[31m-                        <h2>Trabalhando com o git</h2>[m
+[32m+[m[32m                        <h2>Trabalhando com o merge</h2>[m
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros leo. Vestibulum[m
+                             aliquam vel libero eget porttitor. Nunc nisl nunc, suscipit quis quam ut, congue fermentum[m
+                             ipsum. In consectetur, leo a accumsan eleifend, tortor leo eleifend nunc, sed pulvinar neque[m
+[36m@@ -42,7 +42,7 @@[m
+                 <div class="project-item">[m
+                     <div class="project-info">[m
+                         <h1>Projeto 2</h1>[m
+[31m-                        <h2>Código para github.</h2>[m
+[32m+[m[32m                        <h2>Código para github. </h2>[m
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros leo. Vestibulum[m
+                             aliquam vel libero eget porttitor. Nunc nisl nunc, suscipit quis quam ut, congue fermentum[m
+                             ipsum. In consectetur, leo a accumsan eleifend, tortor leo eleifend nunc, sed pulvinar neque[m
