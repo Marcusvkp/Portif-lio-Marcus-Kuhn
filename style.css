@@ -1,25 +1,33 @@
+/* Importação da fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
 
+/* Reset CSS */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Configurações globais */
 html{
-    font-size: 10px;
-    font-family: 'Poppins', 'Times New Roman', Times, serif ;
-    scroll-behavior: smooth;
+    font-size: 10px; /* Define o tamanho da fonte base */
+    font-family: 'Poppins', 'Times New Roman', Times, serif; /* Define a família de fontes */
+    scroll-behavior: smooth; /* Suaviza o scroll */
 }
 
+/* Estilo para links */
 a{
-    text-decoration: none;
+    text-decoration: none; /* Remove o sublinhado dos links */
 }
+
+/* Estilo para imagens */
 img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Faz a imagem cobrir o espaço definido */
 }
+
+/* Estilo para parágrafos */
 p {
     font-size: 1.4rem;
     margin-top: 5px;
@@ -28,6 +36,7 @@ p {
     letter-spacing: 0.05rem;
 }
 
+/* Container principal */
 .container{
     min-height: 100vh;
     width: 100%;
@@ -35,6 +44,8 @@ p {
     align-items: center;
     justify-content: center;
 }
+
+/* Estilos para títulos de seções */
 .section-title {
     font-size: 4rem;
     font-weight: 500;
@@ -46,10 +57,7 @@ p {
     text-align: center;
 }
 
-
-
 /* Seção de apresentação */
-
 #presentation{
     background-image: url(./background.jpeg);
     background-size: cover;
@@ -57,7 +65,10 @@ p {
     position: relative;
     z-index: 1;
 }
+
+/* Animação para revelar o texto na apresentação */
 #presentation h1{
+    /* Estilos padrão para os títulos */
     display: block;
     width: fit-content;
     font-size: 5rem;
@@ -66,17 +77,24 @@ p {
     animation: text_reveal .5s ease forwards;
     animation-delay: 1.5s;
 }
+
+/* Animações específicas para cada título */
 #presentation h1:nth-child(1){
     animation-delay: .8s;
 }
+
 #presentation h1:nth-child(2){
     animation-delay: 1.8s;
 }
+
 #presentation h1:nth-child(3){
     animation: text_reveal_name .5s ease forwards;
     animation-delay: 2.8s;
 }
+
+/* Estilos para o botão de chamada na apresentação */
 #presentation .cta{
+    /* Estilos do botão */
     display: inline-block;
     padding: 10px 30px;
     color: gold;
@@ -88,63 +106,64 @@ p {
     margin-top: 20px;
     transition: .5s ease;
     transition-property: background-color, color;
-
 }
+
+/* Estilos para o botão de chamada ao passar o mouse */
 #presentation .cta:hover{
     color: white;
     font-weight: 500;
     background-color: gold;
 }
+
+/* Animação para revelar o texto dentro de um retângulo */
 #presentation h1 span{
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     height: 100%;
     width: 0%;
     animation: text_reveal_box 1s ease;
     animation-delay: .5s;
     background-color: gold;
 }
-#presentation h1:nth-child(1) span{
-    animation-delay: .5s;
-}
-#presentation h1:nth-child(2) span{
-    animation-delay: 1.5s;
-}
-#presentation h1:nth-child(3) span{
-    animation-delay: 2.5s;
-}
+
+/* Estilos para o fundo escuro sobreposto na apresentação */
 #presentation::after{
     content: '';
     position: absolute;
-    left:0;
+    left: 0;
     top: 0;
-    height:100%;
+    height: 100%;
     width: 100%;
-    background-color:black;
+    background-color: black;
     opacity: 0.5;
     z-index: -1;
 }
 
-/* Seção de Portifólio */
-
+/* Seção de portfólio */
 #portfolio .portfolio{
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 0;
 }
+
+/* Estilos para o título do portfólio */
 #portfolio .portfolio-header h1{
     margin-bottom: 50px;
 }
+
+/* Estilos para a lista de projetos */
 #portfolio .all-projects {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
+/* Estilos para os itens de projeto */
 #portfolio .project-item{
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -154,6 +173,7 @@ p {
     border-radius: 10px;
 }
 
+/* Estilos para as informações do projeto */
 #portfolio .project-info {
     padding: 30px;
     flex-basis: 50%;
@@ -166,6 +186,7 @@ p {
     color: white;
 }
 
+/* Estilos para os títulos e subtítulos dos projetos */
 #portfolio .project-info h1{
     font-size: 4rem;
     font-weight: 500;
@@ -177,6 +198,7 @@ p {
     margin-top: 10px;
 }
 
+/* Estilos para as imagens dos projetos */
 #portfolio .project-img {
     flex-basis: 50%;
     height: 300px;
@@ -184,30 +206,34 @@ p {
     position: relative;
 }
 
+/* Estilos para a sobreposição escura sobre as imagens dos projetos */
 #portfolio .project-img:after {
     content: '';
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     height: 100%;
     width: 100%;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
     opacity: 0.7;
 }
+
+/* Efeito de escala nas imagens dos projetos ao passar o mouse */
 #portfolio .project-img img{
     transition: 0.5s ease transform;
 }
+
 #portfolio .project-item:hover .project-img img{
     transform: scale(1.1);
 }
 
-/* Keyframes */
-
+/* Keyframes para as animações */
 @keyframes text_reveal{
     100%{
         color: white;
     }
 }
+
 @keyframes text_reveal_name{
     100%{
         color: gold;
@@ -217,17 +243,18 @@ p {
 
 @keyframes text_reveal_box{
     50%{
-        width:100%;
-        left:0;
+        width: 100%;
+        left: 0;
     }
     100%{
         width: 0;
-        left:100%
+        left: 100%;
     }
 }
 
-/* Media Query */
+/* Media Query para telas maiores que 768px */
 @media only screen and (min-width: 768px) {
+    /* Estilos para os itens de projeto em telas maiores */
     #portfolio .project-item {
         flex-direction: row;
         height: 400px;
@@ -235,15 +262,18 @@ p {
         width: 100%;
         border-radius: 0;
     }
+
+    /* Estilos para as informações e imagens dos projetos em telas maiores */
     #portfolio .all-projects .project-info{
-        height: 100%
+        height: 100%;
     }
+
     #portfolio .all-projects .project-img{
-        height: 100%
+        height: 100%;
     }
+
+    /* Inversão da direção dos itens de projeto em telas maiores */
     #portfolio .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
-
-
 }
